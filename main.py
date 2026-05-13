@@ -16,3 +16,43 @@ while opcion != "4":
     
     
     opcion = input("Seleccione una opcion: ")
+    
+    
+    # CONDICIONALES 
+    if opcion == "1":
+        print("Su saldo es:")
+        print(saldo)
+        
+    elif opcion == "2":
+        deposito = int(input("Monto a depositar: "))
+        
+        # VALIDACIONES: NO NEGATIVOS
+        if deposito <= 0:
+            print("Operacion no valida")
+        else:
+            saldo = saldo + deposito
+            listaoperaciones = listaoperaciones + ["Deposito realizado: +" + str(deposito)]
+            print("Deposito exitoso")
+            
+    elif opcion == "3":
+        retiro = int(input("Monto a retirar: "))
+        
+        # VALIDACIONES: NO NEGATIVOS NI QUE SUPEREN EL SALDO
+        if retiro <= 0:
+            print("Operacion no valida")
+        elif retiro > saldo:
+            print("Saldo insuficiente")
+        else:
+            saldo = saldo - retiro
+            listaoperaciones = listaoperaciones + ["Retiro realizado: " + str(retiro)]
+            print("Retiro exitoso")
+
+            
+    elif opcion == "4":
+        print("Historial de transacciones:")
+
+        
+        # SI LA LISTA DE TRANSACCIONES ESTA VACIA
+        if listaoperaciones == []:
+            print("No se realizaron transacciones.")
+
