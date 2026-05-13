@@ -56,3 +56,11 @@ while opcion != "4":
         if listaoperaciones == []:
             print("No se realizaron transacciones.")
 
+  # BUCLE FOR PARA RECORRER LA LISTA DE OPERACIONES
+        for operacion in listaoperaciones:
+            print(operacion)
+            
+        
+        print("Saldo final:")
+        print(saldo)
+        print("Gracias por su tiempo")
