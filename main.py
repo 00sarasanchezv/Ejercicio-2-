@@ -64,3 +64,11 @@ while opcion != "4":
         print("Saldo final:")
         print(saldo)
         print("Gracias por su tiempo")
+
+           # ESTE IF MANEJA LAS OPCIONES INCORRECTAS
+    if opcion != "1":
+        if opcion != "2":
+            if opcion != "3":
+                if opcion != "4":
+                    print("Opcion incorrecta. Intente de nuevo.")
+
